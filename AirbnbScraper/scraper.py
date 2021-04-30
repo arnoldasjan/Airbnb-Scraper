@@ -406,7 +406,7 @@ class Scraper:
                             break
 
                 else:
-                    print("No more listings found")
+                    print("Your search has no results or no more listings found")
                     break
 
                 time.sleep(random.uniform(2, 3))
