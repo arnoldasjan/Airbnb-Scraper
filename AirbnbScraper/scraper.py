@@ -56,6 +56,30 @@ class Scraper:
             self.__driver = webdriver.Chrome("chromedriver", options=chrome_options)
 
     @property
+    def number_of_listings(self) -> int:
+        """
+        Returns the initialised number of listings to scrape
+        :return: number of listings int
+        """
+        return self.__number_of_listings
+
+    @property
+    def city(self) -> str:
+        """
+        Returns the initialised city to scrape
+        :return: city str
+        """
+        return self.__city
+
+    @property
+    def country(self) -> str:
+        """
+        Returns the initialised country to scrape
+        :return: country str
+        """
+        return self.__country
+
+    @property
     def driver(self) -> webdriver:
         """
         Returns the current Selenium Chromedriver
