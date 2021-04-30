@@ -238,9 +238,11 @@ class Scraper:
         :return: Listing's price float
         """
         try:
-            price = float(re.findall(
-                "\d+", listing.find_element_by_class_name("_olc9rf0").text
-            )[0])
+            price = float(
+                re.findall("\d+", listing.find_element_by_class_name("_olc9rf0").text)[
+                    0
+                ]
+            )
         except:
             price = None
         return price
@@ -265,9 +267,9 @@ class Scraper:
         :return: Listing's number of reviews int
         """
         try:
-            reviews = int(re.findall(
-                "\d+", listing.find_element_by_class_name("_a7a5sx").text
-            )[0])
+            reviews = int(
+                re.findall("\d+", listing.find_element_by_class_name("_a7a5sx").text)[0]
+            )
         except:
             reviews = None
 
